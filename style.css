@@ -3768,3 +3768,225 @@ body {
 .designer-credit a:hover {
     color: var(--amarillo);
 }
+
+/* =================================
+   PORTADA - CELULARES
+================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: max(100svh, 760px);
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .hero-emblem {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+
+        width: clamp(135px, 38vw, 165px);
+
+        z-index: 3;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: clamp(210px, 27%, 245px);
+        left: 0;
+
+        width: 100%;
+        padding: 0 7%;
+        margin: 0;
+
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: 21vw;
+        letter-spacing: -2px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .hero-actions .hero-button {
+        min-width: 230px;
+        justify-content: space-between;
+        white-space: nowrap;
+        font-size: 10px;
+        padding: 16px 18px;
+    }
+
+    .hero-footer {
+        bottom: 22px;
+    }
+
+}
+
+/* =====================================
+   PRESENTACIÓN DE CLASES
+   COMPOSICIÓN EDITORIAL
+===================================== */
+
+.classes-header {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 7%;
+    text-align: left;
+    margin-bottom: 75px;
+}
+
+.classes-heading-copy {
+    width: 100%;
+}
+
+.classes-header h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(65px, 8vw, 115px);
+    line-height: 0.9;
+    font-weight: 400;
+    text-align: left;
+}
+
+.classes-welcome {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 28px;
+    line-height: 1.5;
+}
+
+.classes-intro-block {
+    max-width: 650px;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.classes-intro-divider {
+    width: 100%;
+    height: 3px;
+    background: var(--fucsia);
+    margin-bottom: 35px;
+}
+
+.classes-intro-block h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.classes-intro-block > p {
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 600px;
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+
+.classes-intro-block .classes-closing {
+    font-weight: 800;
+    color: #a91d59;
+    margin-top: 25px;
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .classes-header {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .classes-header h2 {
+        font-size: 65px;
+    }
+
+    .classes-welcome {
+        font-size: 18px;
+    }
+
+    .classes-intro-block {
+        max-width: 100%;
+    }
+
+    .classes-intro-block h3 {
+        font-size: 34px;
+    }
+
+    .classes-intro-block > p {
+        font-size: 14px;
+    }
+
+}
+
+/* =================================
+   BOTONES DE PORTADA
+================================= */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.hero-actions .hero-button {
+    margin-top: 0;
+}
+
+/* BOTÓN DESCUBRÍ LAS CLASES */
+
+.hero-actions .hero-button:not(.hero-button-summer) {
+    background: var(--amarillo);
+    color: #080808;
+}
+
+/* BOTÓN VERANO 2027 */
+
+.hero-actions .hero-button-summer {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid var(--amarillo);
+}
+
+.hero-actions .hero-button-summer span {
+    color: #ffffff;
+}
+
+.hero-actions .hero-button-summer:hover {
+    background: var(--fucsia);
+    border-color: var(--fucsia);
+    color: #ffffff;
+}
+
+/* TEXTO Y FLECHAS */
+
+.hero-actions .hero-button:not(.hero-button-summer) span {
+    color: #080808;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
