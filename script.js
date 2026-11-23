@@ -165,3 +165,26 @@ if (mapModal && openMap && closeMap) {
     });
 
 }
+
+// PAUSAR VIDEO CUANDO SALE DE PANTALLA
+
+const galleryVideo = document.querySelector(".gallery-scroll-video");
+
+if (galleryVideo && "IntersectionObserver" in window) {
+
+    const videoObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+                galleryVideo.pause();
+            }
+
+        });
+
+    }, {
+        threshold: 0
+    });
+
+    videoObserver.observe(galleryVideo);
+}
